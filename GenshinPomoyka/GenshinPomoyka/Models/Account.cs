@@ -5,12 +5,13 @@ using LinqToDB.Mapping;
 
 namespace GenshinPomoyka.Models
 {
-    [System.ComponentModel.DataAnnotations.Schema.Table("User")]
-    public class User
+    [Table(Name = "Account")]
+    public class Account
     {
-        [System.ComponentModel.DataAnnotations.Schema.Column("user_id"),PrimaryKey]
+        [Column("user_id")]
+        [Column(IsPrimaryKey = true)]
         public Guid Id { get; set; }
-        [System.ComponentModel.DataAnnotations.Schema.Column("user_login")]
+        [Column("user_login")]
         public string Email { get; set; }
         
         [Column("user_password")]
@@ -19,14 +20,9 @@ namespace GenshinPomoyka.Models
         [Column("user_nickname")]
         public string Nickname { get; set; }
         
-        [Column("user_role")]
-        public Roles Role { get; set; }
+        
         
     }
 
-    public enum Roles
-    {
-        Admin,
-        User,
-    }
+    
 }

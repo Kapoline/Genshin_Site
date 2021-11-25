@@ -7,15 +7,29 @@
   <component name="ChangeListManager">
     <list default="true" id="4e94f695-8142-432c-9f54-df649fa4b54e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GenshinPomoyka/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GenshinPomoyka/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/Controllers/WeatherForecastController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/Controllers/AuthController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/Data/DataRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/Data/DataRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/Data/IRepository.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/GenshinPomoyka/GenshinPomoyka.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/GenshinPomoyka.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/Models/Account.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GenshinPomoyka/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/WeatherForecast.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/GenshinPomoyka/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/GenshinPomoyka.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/GenshinPomoyka.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/GenshinPomoyka.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/GenshinPomoyka.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/GenshinPomoyka.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/GenshinPomoyka.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/System.Data.SqlClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/System.Data.SqlClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/ref/GenshinPomoyka.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/ref/GenshinPomoyka.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/runtimes/win/lib/netstandard2.0/System.Data.SqlClient.dll" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/ref/GenshinPomoyka.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/ref/GenshinPomoyka.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/GenshinPomoyka.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/GenshinPomoyka.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/GenshinPomoyka.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/GenshinPomoyka.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/project.packagespec.json" afterDir="false" />
@@ -30,13 +44,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/7zOC67018DA/Registration.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/.nuget/packages/linq2db.postgresql/4.0.0-preview.10/contentFiles/any/any/LinqToDB.Templates/LinqToDB.PostgreSQL.ttinclude" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/7zOC671FE99/Security.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/.nuget/packages/linq2db.postgresql/4.0.0-preview.10/contentFiles/any/any/LinqToDB.Templates/LinqToDB.ttinclude" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/7zOC67AC1BE/PostgresqlAccountRepository.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/7zOC67DE41D/IRepository.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/7zOC677018B/PostgresqlPesonalDataRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/.nuget/packages/linq2db.postgresql/4.0.0-preview.10/contentFiles/any/any/LinqToDB.Templates/LinqToDB.Tools.ttinclude" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/.nuget/packages/linq2db.postgresql/4.0.0-preview.10/contentFiles/any/any/LinqToDB.Templates/LinqToDB.PostgreSQL.Tools.ttinclude" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/.nuget/packages/linq2db.postgresql/4.0.0-preview.10/contentFiles/any/any/LinqToDB.Templates/MultipleFiles.ttinclude" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="20oyyNGUZSiXRoDoQigBhE0oANh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -45,6 +57,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3499268" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -98,7 +112,15 @@
       <workItem from="1637153968895" duration="1211000" />
       <workItem from="1637245539254" duration="1497000" />
       <workItem from="1637321968482" duration="5172000" />
-      <workItem from="1637347227653" duration="11779000" />
+      <workItem from="1637347227653" duration="12334000" />
+      <workItem from="1637386472519" duration="3325000" />
+      <workItem from="1637570190915" duration="551000" />
+      <workItem from="1637689372567" duration="1189000" />
+      <workItem from="1637754640856" duration="666000" />
+      <workItem from="1637758487974" duration="1192000" />
+      <workItem from="1637780380196" duration="1192000" />
+      <workItem from="1637852835843" duration="3471000" />
+      <workItem from="1637876923282" duration="3884000" />
     </task>
     <servers />
   </component>

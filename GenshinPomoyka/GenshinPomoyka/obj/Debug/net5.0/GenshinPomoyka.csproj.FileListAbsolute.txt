@@ -142,8 +142,6 @@ D:\git\Genshin_Site\GenshinPomoyka\GenshinPomoyka\bin\Debug\net5.0\runtimes\osx-
 D:\git\Genshin_Site\GenshinPomoyka\GenshinPomoyka\bin\Debug\net5.0\runtimes\win-x64\native\e_sqlite3.dll
 D:\git\Genshin_Site\GenshinPomoyka\GenshinPomoyka\bin\Debug\net5.0\runtimes\win-x86\native\e_sqlite3.dll
 D:\git\Genshin_Site\GenshinPomoyka\GenshinPomoyka\bin\Debug\net5.0\runtimes\win8-arm\native\e_sqlite3.dll
-D:\git\Genshin_Site\GenshinPomoyka\GenshinPomoyka\bin\Debug\net5.0\runtimes\unix\lib\netstandard2.0\System.Data.SqlClient.dll
-D:\git\Genshin_Site\GenshinPomoyka\GenshinPomoyka\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Data.SqlClient.dll
 D:\git\Genshin_Site\GenshinPomoyka\GenshinPomoyka\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\git\Genshin_Site\GenshinPomoyka\GenshinPomoyka\obj\Debug\net5.0\GenshinPomoyka.csproj.AssemblyReference.cache
 D:\git\Genshin_Site\GenshinPomoyka\GenshinPomoyka\obj\Debug\net5.0\GenshinPomoyka.GeneratedMSBuildEditorConfig.editorconfig
@@ -161,3 +159,9 @@ D:\git\Genshin_Site\GenshinPomoyka\GenshinPomoyka\obj\Debug\net5.0\GenshinPomoyk
 D:\git\Genshin_Site\GenshinPomoyka\GenshinPomoyka\obj\Debug\net5.0\ref\GenshinPomoyka.dll
 D:\git\Genshin_Site\GenshinPomoyka\GenshinPomoyka\obj\Debug\net5.0\GenshinPomoyka.pdb
 D:\git\Genshin_Site\GenshinPomoyka\GenshinPomoyka\obj\Debug\net5.0\GenshinPomoyka.genruntimeconfig.cache
+D:\git\Genshin_Site\GenshinPomoyka\GenshinPomoyka\bin\Debug\net5.0\linq2db.dll
+D:\git\Genshin_Site\GenshinPomoyka\GenshinPomoyka\bin\Debug\net5.0\LinqToDB.Identity.dll
+D:\git\Genshin_Site\GenshinPomoyka\GenshinPomoyka\bin\Debug\net5.0\LINQtoDataTable.dll
+D:\git\Genshin_Site\GenshinPomoyka\GenshinPomoyka\bin\Debug\net5.0\Mindbox.Data.Linq.dll
+D:\git\Genshin_Site\GenshinPomoyka\GenshinPomoyka\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\git\Genshin_Site\GenshinPomoyka\GenshinPomoyka\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

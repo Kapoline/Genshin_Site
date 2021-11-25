@@ -4,6 +4,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using GenshinPomoyka.Data;
 using GenshinPomoyka.Models;
 using GenshinPomoyka.Options;
 using Microsoft.AspNetCore.Http;
@@ -21,27 +22,19 @@ namespace GenshinPomoyka.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IOptions<AuthOptions> authOptions;
-
-        public AuthController(IOptions<AuthOptions> authOptions)
-        {
-            this.authOptions = authOptions;
-        }
+        private readonly DataRepository _data;
         
         /// <summary>
-        /// This list just a local data example for test
+        /// Auth controller constructor
         /// </summary>
-        private List<User> Users=>new List<User>
+        /// <param name="authOptions">jwt token services</param>
+        /// <param name="dataRepository">instance of data connection</param>
+        public AuthController(IOptions<AuthOptions> authOptions,DataRepository dataRepository)
         {
-            new User()
-            {
-                Id = Guid.Parse("8e7eb047-e1e0-4801-ba41-f8360a9e64a7"),
-                Email = "shiakyo@yandex.ru",
-                Password = "zxc123cxz123",
-                Nickname = "shikayo",
-                Role =  Roles.User
-                
-            }
-        };
+            this.authOptions = authOptions;
+            _data = dataRepository;
+        }
+        
         
         /// <summary>
         /// Register request method
@@ -54,6 +47,7 @@ namespace GenshinPomoyka.Controllers
         [HttpPost]
         public IActionResult Registration(string email, string password)
         {
+            
             return null; //later  
         }
         
@@ -78,9 +72,9 @@ namespace GenshinPomoyka.Controllers
             return Unauthorized();
         }
 
-        private User AuthenticateUser(string email, string password)
+        private Account AuthenticateUser(string email, string password)
         {
-            return Users.SingleOrDefault(u => u.Email == email && u.Password == password);
+            return _data.Users.FirstOrDefault(u => email == u.Email && password == u.Password);
         }
 
         
@@ -89,7 +83,7 @@ namespace GenshinPomoyka.Controllers
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        private string JwtGenerate(User user)
+        private string JwtGenerate(Account user)
         {
             var authParams = authOptions.Value;
 
@@ -100,7 +94,8 @@ namespace GenshinPomoyka.Controllers
             {
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
                 new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-                new Claim("role",user.Role.ToString())
+                new Claim(JwtRegisteredClaimNames.Sub,user.Password),
+                
             };
             
 

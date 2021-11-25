@@ -75,6 +75,10 @@
             "linq2db.Identity": {
               "target": "Package",
               "version": "[3.3.0, )"
+            },
+            "netstandard-System.Data.Linq": {
+              "target": "Package",
+              "version": "[1.0.1, )"
             }
           },
           "imports": [

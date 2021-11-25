@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GenshinPomoyka.Data;
 using GenshinPomoyka.Options;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -28,9 +29,14 @@ namespace GenshinPomoyka
         {
             services.AddControllers();
 
+            
+            services.AddTransient<DataRepository>(x =>
+                new DataRepository(Configuration.GetConnectionString("DbConnection")));
+
             var authOptionsConfiguration = Configuration.GetSection("Auth");
             services.Configure<AuthOptions>(authOptionsConfiguration);
-            
+
+
             services.AddCors(options =>
             {
                 options.AddDefaultPolicy(builder =>
