@@ -12,7 +12,6 @@ namespace GenshinPomoyka.Data
 {
     public class DataRepository
     {
-        
         private DataConnection Connection {get;}
         public DataRepository(string getConnectionString)
         {
@@ -21,7 +20,12 @@ namespace GenshinPomoyka.Data
             Connection = new DataConnection(optionsBuilder.Build());
         }
         
-        public ITable<Account> Users => Connection.GetTable<Account>();
+        public ITable<Account> Accounts => Connection.GetTable<Account>();
+
+        public void AccountCreate(Account account)
+        {
+            Connection.Insert(account);
+        }
         
         
      

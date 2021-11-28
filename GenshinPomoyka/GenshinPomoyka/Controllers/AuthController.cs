@@ -45,10 +45,26 @@ namespace GenshinPomoyka.Controllers
 
         [Route("registration")]
         [HttpPost]
-        public IActionResult Registration(string email, string password)
+        public IActionResult Registration([FromBody] RegRequest request)
         {
+            var user = IsUserExists(request.Email);
+            if (user != null)
+            {
+                return Ok("Account already exist");
+            }
+
+            user = new Account()
+            {
+                Id = Guid.NewGuid(),
+                Email = request.Email,
+                Password = PasswordHashing.Hasher.Encrypt(request.Password),
+                Nickname = request.Nickname,
+                Role = "User"
+            };
             
-            return null; //later  
+            _data.AccountCreate(user);
+
+            return Ok("reg was successful");
         }
         
         /// <summary>
@@ -59,13 +75,16 @@ namespace GenshinPomoyka.Controllers
         [HttpPost]
         public IActionResult Login([FromBody] AuthRequest request)
         {
-            var user = AuthenticateUser(request.Email, request.Password);
+            var pass = PasswordHashing.Hasher.Encrypt(request.Password);
+            var user = AuthenticateUser(request.Email, pass);
             if (user != null)
             {
                 var token = JwtGenerate(user);
                 return Ok(new
                 {
-                    access_token=token
+                    access_token=token,
+                    request.Email,
+                    user.Nickname
                 });
             }
 
@@ -74,7 +93,12 @@ namespace GenshinPomoyka.Controllers
 
         private Account AuthenticateUser(string email, string password)
         {
-            return _data.Users.FirstOrDefault(u => email == u.Email && password == u.Password);
+            return _data.Accounts.FirstOrDefault(u => email == u.Email && password == u.Password);
+        }
+
+        private Account IsUserExists(string email)
+        {
+            return _data.Accounts.FirstOrDefault(u => email == u.Email);
         }
 
         

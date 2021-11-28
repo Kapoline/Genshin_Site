@@ -20,6 +20,9 @@ namespace GenshinPomoyka.Models
         [Column("user_nickname")]
         public string Nickname { get; set; }
         
+        [Column("user_role")]
+        public string Role { get; set; }
+        
         
         
     }
