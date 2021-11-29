@@ -50,7 +50,7 @@ namespace GenshinPomoyka.Controllers
             var user = IsUserExists(request.Email);
             if (user != null)
             {
-                return Ok("Account already exist");
+                return Conflict("Account already exist");
             }
 
             user = new Account()

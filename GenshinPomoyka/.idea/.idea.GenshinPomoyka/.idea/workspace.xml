@@ -8,15 +8,10 @@
     <list default="true" id="4e94f695-8142-432c-9f54-df649fa4b54e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GenshinPomoyka/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GenshinPomoyka/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GenshinPomoyka/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/Controllers/AuthController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/Data/DataRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/Data/DataRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/Models/Account.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/Models/Account.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/GenshinPomoyka.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/GenshinPomoyka.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/GenshinPomoyka.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/GenshinPomoyka.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/ref/GenshinPomoyka.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/ref/GenshinPomoyka.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/ref/GenshinPomoyka.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/ref/GenshinPomoyka.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +102,8 @@
       <workItem from="1637936138922" duration="2047000" />
       <workItem from="1637982965239" duration="6628000" />
       <workItem from="1638000962880" duration="1905000" />
-      <workItem from="1638104585033" duration="1248000" />
+      <workItem from="1638104585033" duration="1346000" />
+      <workItem from="1638120022248" duration="527000" />
     </task>
     <servers />
   </component>
