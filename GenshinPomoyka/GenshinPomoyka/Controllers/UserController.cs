@@ -1,48 +1,38 @@
 using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
 using GenshinPomoyka.Data;
+using GenshinPomoyka.Helpers;
 using GenshinPomoyka.Models;
-using GenshinPomoyka.Options;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
-using NetTaste;
-using Org.BouncyCastle.Asn1.Cms;
-using Org.BouncyCastle.Asn1.Ess;
 
 namespace GenshinPomoyka.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthController : ControllerBase
+    public class UserController : ControllerBase
     {
-        private readonly IOptions<AuthOptions> authOptions;
-        private readonly DataRepository _data;
         
+        
+        private readonly JwtService _jwtService;
+        private readonly DataRepository _data;
+
         /// <summary>
         /// Auth controller constructor
         /// </summary>
-        /// <param name="authOptions">jwt token services</param>
+        /// <param name="jwtService"></param>
         /// <param name="dataRepository">instance of data connection</param>
-        public AuthController(IOptions<AuthOptions> authOptions,DataRepository dataRepository)
+        public UserController(JwtService jwtService,DataRepository dataRepository)
         {
-            this.authOptions = authOptions;
+            _jwtService = jwtService;
             _data = dataRepository;
         }
-        
-        
+
+
         /// <summary>
         /// Register request method
         /// </summary>
-        /// <param name="email"></param>
-        /// <param name="password"></param>
         /// <returns></returns>
-
         [Route("registration")]
         [HttpPost]
         public IActionResult Registration([FromBody] RegRequest request)
@@ -79,18 +69,57 @@ namespace GenshinPomoyka.Controllers
             var user = AuthenticateUser(request.Email, pass);
             if (user != null)
             {
-                var token = JwtGenerate(user);
+                var jwt = _jwtService.GenerateToken(user.Id);
+                
+                Response.Cookies.Append("jwt",jwt,new CookieOptions
+                {
+                    HttpOnly = true
+                });
+                
                 return Ok(new
                 {
-                    access_token=token,
-                    request.Email,
-                    user.Nickname
+                    message="success"
                 });
             }
 
             return Unauthorized();
         }
 
+        [Route("getuser")]
+        [HttpGet]
+        public new IActionResult User()
+        {
+            try
+            {
+                var jwt = Request.Cookies["jwt"];
+
+                var token = _jwtService.Verify(jwt);
+                
+                Guid userId = Guid.Parse(token.Issuer);
+
+                Account user = _data.Accounts.FirstOrDefault(u => u.Id == userId);
+
+                return Ok(user);
+            }
+            catch (Exception)
+            {
+                return Unauthorized();
+            }
+        }
+        
+        
+
+
+        [HttpPost("logout")]
+        public IActionResult Logout()
+        {
+            Response.Cookies.Delete("jwt");
+            return Ok(new
+            {
+                message = "success"
+            });
+        }
+        
         private Account AuthenticateUser(string email, string password)
         {
             return _data.Accounts.FirstOrDefault(u => email == u.Email && password == u.Password);
@@ -100,39 +129,10 @@ namespace GenshinPomoyka.Controllers
         {
             return _data.Accounts.FirstOrDefault(u => email == u.Email);
         }
+        
 
         
-        /// <summary>
-        /// Method for generate jwt token
-        /// </summary>
-        /// <param name="user"></param>
-        /// <returns></returns>
-        private string JwtGenerate(Account user)
-        {
-            var authParams = authOptions.Value;
-
-            var securityKey = authParams.GetSymmetricSecurityKey();
-
-            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-            var claims = new List<Claim>()
-            {
-                new Claim(JwtRegisteredClaimNames.Email, user.Email),
-                new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-                new Claim(JwtRegisteredClaimNames.Sub,user.Password),
-                
-            };
-            
-
-            var token = new JwtSecurityToken(
-                authParams.Issuer,
-                authParams.Audience,
-                claims,
-                expires: DateTime.Now.AddSeconds(authParams.TokenLifeTime),
-                signingCredentials: credentials
-            );
-
-            return new JwtSecurityTokenHandler().WriteToken(token);
-        }
+        
         
         
     }

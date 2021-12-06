@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "31YNDpc6svls1AHhJOSFIo7NlbjkBiU4knng7vChpUpw7jQfcRv67rKImH0o2ER+0xaFGHcDWsuqORGIjlr4CQ==",
+  "dgSpecHash": "svII0/KOH41mWL4jzUWuCV+6M2r+G39rAQKsSGZTfmKBhAZ8oqpsW9wpKRorBHlsSxLA/UVEddcPsdyJx9jMqQ==",
   "success": true,
   "projectFilePath": "D:\\git\\Genshin_Site\\GenshinPomoyka\\GenshinPomoyka\\GenshinPomoyka.csproj",
   "expectedPackageFiles": [
@@ -24,6 +24,7 @@
     "C:\\Users\\japan\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.0\\microsoft.aspnetcore.authentication.jwtbearer.5.0.0.nupkg.sha512",
     "C:\\Users\\japan\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",
     "C:\\Users\\japan\\.nuget\\packages\\microsoft.aspnetcore.authorization.policy\\2.2.0\\microsoft.aspnetcore.authorization.policy.2.2.0.nupkg.sha512",
+    "C:\\Users\\japan\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
     "C:\\Users\\japan\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.3\\microsoft.aspnetcore.cryptography.internal.3.1.3.nupkg.sha512",
     "C:\\Users\\japan\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.3\\microsoft.aspnetcore.cryptography.keyderivation.3.1.3.nupkg.sha512",
     "C:\\Users\\japan\\.nuget\\packages\\microsoft.aspnetcore.dataprotection\\2.1.1\\microsoft.aspnetcore.dataprotection.2.1.1.nupkg.sha512",

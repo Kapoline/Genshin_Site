@@ -26,9 +26,5 @@ namespace GenshinPomoyka.Data
         {
             Connection.Insert(account);
         }
-        
-        
-     
-        
     }
 }

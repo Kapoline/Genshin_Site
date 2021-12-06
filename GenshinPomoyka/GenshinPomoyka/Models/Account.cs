@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using LinqToDB.Mapping;
+using Newtonsoft.Json;
 
 
 namespace GenshinPomoyka.Models
@@ -22,9 +23,6 @@ namespace GenshinPomoyka.Models
         
         [Column("user_role")]
         public string Role { get; set; }
-        
-        
-        
     }
 
     

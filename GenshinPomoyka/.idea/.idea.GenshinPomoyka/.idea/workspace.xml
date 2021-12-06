@@ -7,11 +7,27 @@
   <component name="ChangeListManager">
     <list default="true" id="4e94f695-8142-432c-9f54-df649fa4b54e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GenshinPomoyka/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GenshinPomoyka/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/Controllers/AuthController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/Controllers/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/Data/DataRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/Data/DataRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/GenshinPomoyka.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/GenshinPomoyka.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/Models/Account.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/Models/Account.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/GenshinPomoyka.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/GenshinPomoyka.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/GenshinPomoyka.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/GenshinPomoyka.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/GenshinPomoyka.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/GenshinPomoyka.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/ref/GenshinPomoyka.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/bin/Debug/net5.0/ref/GenshinPomoyka.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/GenshinPomoyka.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/ref/GenshinPomoyka.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/Debug/net5.0/ref/GenshinPomoyka.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/GenshinPomoyka.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/GenshinPomoyka.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenshinPomoyka/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/GenshinPomoyka/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +39,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/.nuget/packages/linq2db.postgresql/4.0.0-preview.10/contentFiles/any/any/LinqToDB.Templates/LinqToDB.PostgreSQL.ttinclude" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/544fbcdb561849fa93fa057c793d7a4613f78/A/AuthorizeAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/.nuget/packages/linq2db.postgresql/4.0.0-preview.10/contentFiles/any/any/LinqToDB.Templates/LinqToDB.ttinclude" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/.nuget/packages/linq2db.postgresql/4.0.0-preview.10/contentFiles/any/any/LinqToDB.Templates/LinqToDB.Tools.ttinclude" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/.nuget/packages/linq2db.postgresql/4.0.0-preview.10/contentFiles/any/any/LinqToDB.Templates/LinqToDB.PostgreSQL.Tools.ttinclude" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
@@ -104,6 +121,17 @@
       <workItem from="1638000962880" duration="1905000" />
       <workItem from="1638104585033" duration="1346000" />
       <workItem from="1638120022248" duration="527000" />
+      <workItem from="1638165426740" duration="669000" />
+      <workItem from="1638171045592" duration="1482000" />
+      <workItem from="1638172777366" duration="1761000" />
+      <workItem from="1638211601141" duration="1511000" />
+      <workItem from="1638556072512" duration="1388000" />
+      <workItem from="1638562491824" duration="4830000" />
+      <workItem from="1638706803892" duration="2439000" />
+      <workItem from="1638773709806" duration="79000" />
+      <workItem from="1638804458400" duration="3877000" />
+      <workItem from="1638812978268" duration="1644000" />
+      <workItem from="1638819691514" duration="939000" />
     </task>
     <servers />
   </component>

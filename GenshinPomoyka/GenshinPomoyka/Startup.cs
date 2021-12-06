@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using GenshinPomoyka.Data;
+using GenshinPomoyka.Helpers;
 using GenshinPomoyka.Options;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -27,14 +28,18 @@ namespace GenshinPomoyka
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-
+            services.AddCors();
             
-            services.AddTransient<DataRepository>(x =>
+            services.AddControllers();
+            
+            
+            services.AddScoped<DataRepository>(x =>
                 new DataRepository(Configuration.GetConnectionString("DbConnection")));
 
             var authOptionsConfiguration = Configuration.GetSection("Auth");
             services.Configure<AuthOptions>(authOptionsConfiguration);
+
+            services.AddScoped<JwtService>();
 
 
             services.AddCors(options =>
@@ -57,7 +62,12 @@ namespace GenshinPomoyka
 
             app.UseRouting();
 
-            app.UseCors();
+            app.UseCors(options=>options
+                .WithOrigins(new []{"http://localhost:44388","http://localhost:58816"})
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowCredentials()
+            );
 
             app.UseAuthentication();
             app.UseAuthorization();
