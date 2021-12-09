@@ -29,6 +29,9 @@ namespace GenshinPomoyka
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
+
+            
+            services.AddMvc();
             
             services.AddControllers();
             
@@ -59,6 +62,10 @@ namespace GenshinPomoyka
                 app.UseDeveloperExceptionPage();
                 
             }
+
+            app.UseStaticFiles();
+
+            app.UseMvcWithDefaultRoute();
 
             app.UseRouting();
 

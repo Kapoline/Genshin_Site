@@ -1,0 +1,25 @@
+﻿@model RegRequest
+
+<div class="reg_content">
+    <form class="reg-inner-content" asp-action="Registration">
+        <div class="form-group">
+            <label asp-for="Email">Email</label>
+            <input asp-for="Email" type="text" class="form-control" id="inputEmail">
+        </div>
+        <div class="form-group">
+            <label asp-for="Password">Password</label>
+            <input asp-for="Password" type="password" class="form-control" id="inputPassword">
+        </div>
+        <div class="form-group">
+            <label asp-for="Nickname">Nickname</label>
+            <input asp-for="Nickname" type="text" class="form-control" id="inputNickName">
+        </div>
+        <div class="form-group">
+            <label asp-for="ConfirmPassword">Confirm Password</label>
+            <input asp-for="ConfirmPassword" type="password" class="form-control" id="inputConfirmPassword">
+        </div>
+        <button type="submit" class="btn btn-primary reg-btn">Регистрация</button>
+    </form>
+</div>
+
+    

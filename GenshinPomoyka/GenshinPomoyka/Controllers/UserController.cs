@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using GenshinPomoyka.Data;
 using GenshinPomoyka.Helpers;
@@ -8,12 +8,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GenshinPomoyka.Controllers
 {
+    
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
     {
-        
-        
         private readonly JwtService _jwtService;
         private readonly DataRepository _data;
 
@@ -27,8 +26,7 @@ namespace GenshinPomoyka.Controllers
             _jwtService = jwtService;
             _data = dataRepository;
         }
-
-
+        
         /// <summary>
         /// Register request method
         /// </summary>
@@ -67,22 +65,20 @@ namespace GenshinPomoyka.Controllers
         {
             var pass = PasswordHashing.Hasher.Encrypt(request.Password);
             var user = AuthenticateUser(request.Email, pass);
-            if (user != null)
+            
+            if (user == null) return Unauthorized();
+            
+            var jwt = _jwtService.GenerateToken(user.Id);
+                
+            Response.Cookies.Append("jwt",jwt,new CookieOptions
             {
-                var jwt = _jwtService.GenerateToken(user.Id);
+                HttpOnly = true
+            });
                 
-                Response.Cookies.Append("jwt",jwt,new CookieOptions
-                {
-                    HttpOnly = true
-                });
-                
-                return Ok(new
-                {
-                    message="success"
-                });
-            }
-
-            return Unauthorized();
+            return Ok(new
+            {
+                message="success"
+            });
         }
 
         [Route("getuser")]
@@ -107,9 +103,6 @@ namespace GenshinPomoyka.Controllers
             }
         }
         
-        
-
-
         [HttpPost("logout")]
         public IActionResult Logout()
         {
@@ -129,11 +122,5 @@ namespace GenshinPomoyka.Controllers
         {
             return _data.Accounts.FirstOrDefault(u => email == u.Email);
         }
-        
-
-        
-        
-        
-        
     }
 }

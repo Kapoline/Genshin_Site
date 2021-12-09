@@ -10,6 +10,7 @@
         <PackageReference Include="LinqToDataTable" Version="1.0.3" />
         <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.0" />
         <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
         <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
         <PackageReference Include="netstandard-System.Data.Linq" Version="1.0.1" />
         <PackageReference Include="Romens.OpenApi.Core" Version="1.0.0.7" />
@@ -18,7 +19,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Views" />
+      <Folder Include="Views\Users" />
+      <Folder Include="wwwroot" />
     </ItemGroup>
 
 </Project>
