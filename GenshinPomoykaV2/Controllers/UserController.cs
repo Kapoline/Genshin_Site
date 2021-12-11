@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using GenshinPomoykaV2.Models;
 using GenshinPomoykaV2.Data;
 using GenshinPomoykaV2.Helpers;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.DataProtection.Internal;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -33,7 +37,8 @@ namespace GenshinPomoykaV2.Controllers
         }
         
         [HttpPost]
-        public IActionResult Registration([FromForm]RegRequest request)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Registration([FromForm] RegRequest request)
         {
             if (ModelState.IsValid)
             {
@@ -53,14 +58,18 @@ namespace GenshinPomoykaV2.Controllers
                 };
             
                 _data.AccountCreate(user);
-                return Redirect("https://localhost:44310/");
+
+                await Authenticate(request.Email);
+                
+                return RedirectToAction("Index","Home");
             }
             
             return View(request);
         }
 
         [HttpPost]
-        public IActionResult Login([FromForm] AuthRequest request)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login([FromForm] AuthRequest request)
         {
             if (ModelState.IsValid)
             {
@@ -68,24 +77,14 @@ namespace GenshinPomoykaV2.Controllers
                 var user = Authentication(request.Email, pass);
             
                 if (user == null) return View();
-            
-                var jwt = _service.GenerateToken(user.Id);
-                
-                Response.Cookies.Append("jwt",jwt,new CookieOptions
-                {
-                    HttpOnly = true
-                });
+
+                await Authenticate(request.Email);
 
                 return Redirect("https://localhost:44310/");
             }
             return View(request);
         }
         
-         public IActionResult LogOut()
-         {
-             Response.Cookies.Delete("jwt");
-             return Redirect("https://localhost:44310/");
-         }
 
         private Account Authentication(string email,string password)
         {
@@ -94,6 +93,26 @@ namespace GenshinPomoykaV2.Controllers
         private Account IsUserExists(string email)
         {
             return _data.Accounts.FirstOrDefault(u => email == u.Email);
+        }
+        
+        private async Task Authenticate(string userName)
+        {
+            
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimsIdentity.DefaultNameClaimType, userName)
+            };
+            
+            
+            ClaimsIdentity id = new ClaimsIdentity(claims, "ApplicationCookie", ClaimsIdentity.DefaultNameClaimType, ClaimsIdentity.DefaultRoleClaimType);
+            
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(id));
+        }
+ 
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Index", "Home");
         }
     }
 }

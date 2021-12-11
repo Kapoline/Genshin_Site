@@ -8,6 +8,7 @@ using GenshinPomoykaV2.Options;
 using GenshinPomoykaV2.Data;
 using GenshinPomoykaV2.Helpers;
 using GenshinPomoykaV2.Options;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -46,6 +47,12 @@ namespace GenshinPomoykaV2
             services.Configure<AuthOptions>(authOptionsConfiguration);
 
             services.AddScoped<JwtService>();
+            
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options => //CookieAuthenticationOptions
+                {
+                    options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/user/login");
+                });
 
 
             services.AddCors(options =>

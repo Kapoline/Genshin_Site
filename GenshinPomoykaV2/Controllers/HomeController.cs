@@ -11,7 +11,7 @@ namespace GenshinPomoykaV2.Controllers
         }
 
         
-        
+        [Authorize]
         public IActionResult Privacy()
         {
             return View();
