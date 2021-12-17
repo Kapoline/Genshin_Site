@@ -1,0 +1,146 @@
+.background_pic{
+  background-image: url("refs/background\ image\ 2.jpg");
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top:0px;
+  z-index: -2;
+}
+
+.background_blur{
+  top: 0px;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  opacity: 55%;
+  background-color: white;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
+@font-face {
+	font-family: 'genshin_font'; 
+	src: local('genshin_font'),
+		url(refs/zh-cn.ttf); 
+}
+@font-face {
+  font-family: 'tenor sans';
+  src: url(https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap);
+}
+
+.side_bar{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100px;
+  height:100%;
+  background-image: linear-gradient(#7A5ECA, #213680);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+#characters_container{
+  width: 100px;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side_pic{
+  height: 70px;
+  width: 70px;
+  margin-top: 15px;
+}
+
+.side_bar_text{
+  color: white;
+  font-family: 'genshin_font';
+  font-size: 14px;
+}
+
+.headers_text{
+  color: #213680;
+  font-family: 'genshin_font';
+  font-size: 25px;
+}
+
+.main_container{
+  height: 100%;
+  max-width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding-inline: 100px;
+}
+
+#pimon_food{
+  position: fixed;
+  right: 100px;
+  top: 60px;
+  width: 559px;
+  height: 700;
+  z-index: 1;
+}
+
+.input_form{
+  border: none;
+  width: 230px;
+  height: 35px;
+  padding-inline: 25px;
+  border-radius: 50px;
+}
+
+.login_texts{
+  margin-top: 12px;
+  margin-bottom: 2px;
+  color: #213680;
+  font-family: 'tenor sans';
+  font-weight: bolder;
+  font-size: 22px;
+}
+
+#login_page_button{
+  background-image: linear-gradient(#213680, #7A5ECA);
+  font-family:'tenor sans';
+  font-weight: normal;
+  color: white;
+  width: 110px;
+  height: 40px;
+  border-radius: 30px;
+  font-size: 23px;
+  border: none;
+  text-decoration: none;
+}
+
+.login_page_button{
+  background-image: linear-gradient(#213680, #7A5ECA);
+  font-family:'tenor sans';
+  font-weight: normal;
+  color: white;
+  width: 110px;
+  height: 40px;
+  border-radius: 30px;
+  font-size: 23px;
+  letter-spacing: 0.3px;
+  border: none;
+  margin-top: 15px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.login_page_button:hover{
+  background-image: linear-gradient(white, #ebe6fa);
+  color: #213680;
+}
+
+.login_page_link{
+  font-family:'tenor sans';
+  font-weight: bolder;
+  color: #213680;
+  font-size: 23px;
+  text-decoration: none;
+  margin-top: 10px;
+  z-index: 2;
+}

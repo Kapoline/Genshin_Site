@@ -1,0 +1,152 @@
+@font-face {
+	font-family: 'genshin_font'; 
+	src: local('genshin_font'),
+		url(refs/zh-cn.ttf); 
+}
+@font-face {
+  font-family: 'tenor sans';
+  src: url(https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap);
+}
+
+.background_pic{
+  background-image: url("refs/background\ image\ 2.jpg");
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top:0px;
+  z-index: -2;
+}
+
+.background_blur{
+  top: 0px;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  opacity: 55%;
+  background-color: white;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
+.side_bar{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100px;
+  height:100%;
+  background-image: linear-gradient(#7A5ECA, #213680);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+#characters_container{
+  width: 100px;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side_pic{
+  height: 70px;
+  width: 70px;
+  margin-top: 15px;
+}
+
+.side_bar_text{
+  color: white;
+  font-family: 'genshin_font';
+  font-size: 14px;
+}
+
+.main_container{
+  margin-left: 120px;
+  margin-right: 40px;
+}
+
+#logo_pic{
+  display: flexbox;
+  width: 170px;
+  height: 60px;
+}
+
+#top_menu_container{
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.top_menu{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.top_header_text{
+  font-family: 'tenor sans';
+  font-weight: 600;
+  font-size: 19px;
+  color: #213680;
+  padding-left: 30px;
+}
+
+#cloud{
+  border-radius: 40px;
+  width: inherit;
+  height: 600px;
+  padding: 24px;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0.425) ;
+}
+
+#profile_container{
+  display: flex;
+  flex-direction: row;
+  border-radius: 40px;
+  padding: 80px;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0.425);
+}
+
+.headers_info{
+  font-family: 'tenor sans';
+  font-weight: 600;
+  font-size: 22px;
+  color: #213680;
+  padding-bottom: 10px;
+}
+
+.underheading_info{
+  font-family: 'montserrat';
+  font-weight: 500;
+  font-size: 19px;
+  color: #213680;
+  padding-bottom: 10px;
+}
+
+.info_container{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.character_div{
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+}
+
+.character_imgs{
+  width: 100%;
+  object-fit: contain;
+}
+
+
+.profile_pic{
+  width: 200px;
+  border-radius: 100%;
+}
