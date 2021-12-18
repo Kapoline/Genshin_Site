@@ -150,3 +150,14 @@
   width: 200px;
   border-radius: 100%;
 }
+
+.characters{
+  display: flex;
+  flex-direction: row;
+}
+
+.small_char_pic{
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
