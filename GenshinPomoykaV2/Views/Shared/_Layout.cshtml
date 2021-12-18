@@ -1,46 +1,89 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>@ViewData["Title"] - GenshinPomoykaV2</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="~/css/site.css"/>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="~/css/main page style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+  <title>Document</title>
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-        <div class="container">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">GenshinPomoykaV2</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                    </li>
-                    <li><a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="LogOut">LogOut</a></li>
-                </ul>
-            </div>
+  <div class="background_pic"></div>
+  <div class="background_blur">
+  </div>
+  <div class="side_bar">
+    <div id="side_bar_container">
+      <div id="logo_div" style="margin: 8px;">
+        <img src="~/refs/smol_logo.png" style="height: 35px;">
+      </div>
+      <div id="characters_container">
+        <div id="characters">
+          <a asp-controller="Wiki" asp-action="ShowCharacters">
+            <img class="side_pic" src="~/refs/chars.png">
+          </a>
         </div>
-    </nav>
-</header>
+        <div class="side_bar_text">Персонажи</div>
+        <div id="weapons">
+          <a asp-controller="Wiki" asp-action="ShowWeapons">
+            <img class="side_pic" src="~/refs/weapons.png">
+          </a>
+        </div>
+        <div class="side_bar_text">Оружие</div>
+        <div id="guides">
+          <a href="google.com">
+            <img class="side_pic" src="~/refs/guides.png">
+          </a>
+        </div>
+        <div class="side_bar_text">Гайды</div>
+      </div>
+    </div>
+  </div>
+  <div class="main_container">
+    <div id="top_menu_container">
+      <div class="top_menu" style="justify-content:start;">
+        <img id="logo_pic" src="~/refs/2.png">
+        <div class="top_header_text">
+          Genshin impact fandom wiki
+        </div>
+      </div>
+      <div class="top_menu" style="justify-content:end;">
+        @if (User.Identity.IsAuthenticated)
+        {
+          <div class="top_header_text">
+            <a asp-controller="User" asp-action="UserPage">@User.Identity?.Name</a>
+          </div>
+          <div class="top_header_text">
+            <a asp-controller="User" asp-action="Logout">Выйти</a>
+          </div>
+        }
+        else
+        {
+          <div class="top_header_text">
+            <a asp-controller="User" asp-action="Login">Войти</a>
+          </div>
+        }
+        @if (User.Identity.IsAuthenticated)
+        {
+          <div class="top_header_text">
+            <a asp-controller="User" asp-action="UserPage">Профиль</a>
+          </div>
+        }
+        <div class="top_header_text">
+          <a asp-controller="Home" asp-action="Index">Главная страница</a>
+        </div>
+      </div>
+    </div>
+
 <div class="container">
     <main role="main" class="pb-3">
         @RenderBody()
     </main>
 </div>
 
-<footer class="border-top footer text-muted">
-    <div class="container">
-        &copy; 2021 - GenshinPomoykaV2 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-    </div>
-</footer>
+</div>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>

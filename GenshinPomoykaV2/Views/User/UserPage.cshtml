@@ -1,0 +1,35 @@
+﻿@using GenshinPomoykaV2.Data
+@model dynamic
+
+@{
+    var data = new DataRepository("Host=localhost;Username=postgres;Password=Rus1032002;Database=GenshinPomoyka");
+    var user = data.FindByEmail(User.Identity?.Name);
+}
+
+<div id="profile_container">
+    <div class="info_container">
+        <div class="headers_info">
+            Имя пользователя
+        </div>
+        <div class="underheading_info">
+            @user.Nickname
+        </div>
+        <div class="headers_info">
+            Пароль
+        </div>
+        <div class="underheading_info">
+            @user.Password
+        </div>
+        <div class="headers_info">
+            Почта
+        </div>
+        <div class="underheading_info">
+            @user.Email
+        </div>
+        <a asp-action="ChangePassword"><h2>Сменить Пароль</h2></a>
+        
+    </div>
+    <div class="profile_pic_container">
+        <img src="~/refs/XiaoAv.png" class="profile_pic">
+    </div>
+</div>

@@ -8,6 +8,7 @@ using GenshinPomoykaV2.Data;
 using GenshinPomoykaV2.Helpers;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.DataProtection.Internal;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -34,6 +35,50 @@ namespace GenshinPomoykaV2.Controllers
         public IActionResult Login()
         {
             return View();
+        }
+
+        public IActionResult UserPage()
+        {
+            return View();
+        }
+
+        public IActionResult ChangePassword()
+        {
+            return View();
+        }
+
+        
+        [HttpPost]
+        [Authorize]
+        public IActionResult ChangePassword([FromForm] ChangePassword changePassword)
+        {
+            var user = _data.FindByEmail(User.Identity?.Name);
+
+            if (user.Password == changePassword.Password)
+            {
+                ModelState.AddModelError("", "Прошлый и нынешний пароли совпадают");
+            }
+
+            if (changePassword.Password != changePassword.ConfirmPassword)
+            {
+                ModelState.AddModelError("", "Пароли различаются");
+            }
+
+            var UserAfter = new Account()
+            {
+                Id = user.Id,
+                Email = user.Email,
+                Password = PasswordHashing.Hasher.Encrypt(changePassword.Password),
+                Nickname = user.Nickname,
+                Role = user.Role
+            };
+            
+
+            _data.ChangePassword(user);
+            _data.AccountCreate(UserAfter);
+            
+
+            return RedirectToAction("UserPage","User");
         }
         
         [HttpPost]
@@ -80,7 +125,7 @@ namespace GenshinPomoykaV2.Controllers
 
                 await Authenticate(request.Email);
 
-                return Redirect("https://localhost:44310/");
+                return RedirectToAction("Index","Home");
             }
             return View(request);
         }

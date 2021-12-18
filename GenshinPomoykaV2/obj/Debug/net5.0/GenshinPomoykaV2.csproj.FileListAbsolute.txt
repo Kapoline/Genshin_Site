@@ -173,7 +173,6 @@ D:\git\Genshin_Site\GenshinPomoykaV2\obj\Debug\net5.0\GenshinPomoykaV2.TagHelper
 D:\git\Genshin_Site\GenshinPomoykaV2\obj\Debug\net5.0\GenshinPomoykaV2.TagHelpers.output.cache
 D:\git\Genshin_Site\GenshinPomoykaV2\obj\Debug\net5.0\GenshinPomoykaV2.RazorCoreGenerate.cache
 D:\git\Genshin_Site\GenshinPomoykaV2\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-D:\git\Genshin_Site\GenshinPomoykaV2\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 D:\git\Genshin_Site\GenshinPomoykaV2\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 D:\git\Genshin_Site\GenshinPomoykaV2\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 D:\git\Genshin_Site\GenshinPomoykaV2\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -183,3 +182,7 @@ D:\git\Genshin_Site\GenshinPomoykaV2\obj\Debug\net5.0\Razor\Views\_ViewStart.csh
 D:\git\Genshin_Site\GenshinPomoykaV2\obj\Debug\net5.0\GenshinPomoykaV2.RazorTargetAssemblyInfo.cs
 D:\git\Genshin_Site\GenshinPomoykaV2\obj\Debug\net5.0\GenshinPomoykaV2.Views.pdb
 D:\git\Genshin_Site\GenshinPomoykaV2\obj\Debug\net5.0\Razor\Views\User\Login.cshtml.g.cs
+D:\git\Genshin_Site\GenshinPomoykaV2\obj\Debug\net5.0\Razor\Views\User\UserPage.cshtml.g.cs
+D:\git\Genshin_Site\GenshinPomoykaV2\obj\Debug\net5.0\Razor\Views\Wiki\ShowCharacters.cshtml.g.cs
+D:\git\Genshin_Site\GenshinPomoykaV2\obj\Debug\net5.0\Razor\Views\Wiki\ShowWeapons.cshtml.g.cs
+D:\git\Genshin_Site\GenshinPomoykaV2\obj\Debug\net5.0\Razor\Views\User\ChangePassword.cshtml.g.cs

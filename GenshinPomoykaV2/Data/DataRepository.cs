@@ -26,5 +26,15 @@ namespace GenshinPomoykaV2.Data
         {
             Connection.Insert(account);
         }
+
+        public Account FindByEmail(string email)
+        {
+            return Accounts.FirstOrDefault(u => u.Email == email);
+        }
+        
+        public void ChangePassword(Account acc)
+        {
+            Connection.Delete(acc);
+        }
     }
 }
